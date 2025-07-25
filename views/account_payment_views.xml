@@ -1,0 +1,14 @@
+<odoo>
+    <data>
+        <record id="view_account_payment_form_sale_order" model="ir.ui.view">
+            <field name="name">account.payment.form.sale.order</field>
+            <field name="model">account.payment</field>
+            <field name="inherit_id" ref="account.view_account_payment_form"/>
+            <field name="arch" type="xml">
+                <field name="ref" position="after">
+                    <field name="sale_order_id"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

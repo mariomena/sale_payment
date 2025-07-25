@@ -1,0 +1,19 @@
+<odoo>
+    <data>
+        <record id="view_order_form_payment_button" model="ir.ui.view">
+            <field name="name">sale.order.form.payment.button</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <header>
+                    <button name="action_open_register_payment_wizard" string="Register Payment" type="object" class="oe_highlight"/>
+                </header>
+                <xpath expr="//page[@name='other_information']" position="inside">
+                    <group string="Payments">
+                        <field name="payment_ids"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
